@@ -10,7 +10,7 @@ import Share from "../components/share";
 
 export default class blogPost extends Component {
   render() {
-    const data = this.props.data.contentfulBlogs;
+    const data = this.props.data.contentfulBlog;
     const disqusShortname = "acupofasmita-com";
     const disqusConfig = {
       identifier: data.id,
@@ -86,7 +86,7 @@ export default class blogPost extends Component {
 
 export const pageQuery = graphql`
   query SinglePostQuery($slug: String!) {
-    contentfulBlogs(slug: { eq: $slug }) {
+    contentfulBlog(slug: { eq: $slug }) {
       id
       title
       slug

@@ -24,7 +24,7 @@ export default class PhotosPage extends Component {
           title="Photos"
           keywords={[`Asmita Gaire`, `Frontend Developer`, `Developer`, `Photo`]}
         />
-        <div className="site-container blogs-page" id="Blogs">
+        <div className="site-container blogs-page" id="Blog">
           <div className="container">
             <div className="section-head">
               <h1 className="line-heading h2">Photos</h1>

@@ -69,8 +69,8 @@ export default class Header extends Component {
                     .filter(item => item === "Blogs")
                     .map(t => {
                       return (
-                        <li key="Blogs">
-                          <Link to={`/#Blogs`}>Blogs</Link>
+                        <li key="Blog">
+                          <Link to={`/#Blog`}>Blog</Link>
                         </li>
                       );
                     })}
@@ -129,8 +129,8 @@ export default class Header extends Component {
                     .filter(item => item === "Blogs")
                     .map(t => {
                       return (
-                        <li key="blogs">
-                          <Link to="/blogs">Blogs</Link>
+                        <li key="blog">
+                          <Link to="/blog">Blog</Link>
                         </li>
                       );
                     })}

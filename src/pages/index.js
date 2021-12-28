@@ -8,7 +8,7 @@ import Banner from "../components/banner";
 import About from "../components/about";
 import Service from "../components/service";
 import Work from "../components/work";
-import Blogs from "../components/blogs";
+import Blog from "../components/blog";
 import Testimonial from "../components/testimonial";
 import Contact from "../components/contact";
 import Photos from "../components/photos";
@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => (
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Blogs")
       .map(t => {
-        return <Blogs key="Blogs" data={data.allContentfulBlogs}></Blogs>;
+        return <Blog key="Blog" data={data.allContentfulBlog} />;
       })}
 
     {data.contentfulSiteInformation.menus
@@ -127,7 +127,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulBlogs(limit: 5, sort: {fields: createdAt, order: DESC}) {
+    allContentfulBlog(limit: 5, sort: {fields: createdAt, order: DESC}) {
       edges {
         node {
           title

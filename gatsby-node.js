@@ -7,7 +7,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     resolve(
       graphql(`
         {
-          allContentfulBlogs(limit: 100) {
+          allContentfulBlog(limit: 100) {
             edges {
               node {
                 id
@@ -20,7 +20,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         if (result.errors) {
           reject(result.errors);
         }
-        result.data.allContentfulBlogs.edges.forEach(edge => {
+        result.data.allContentfulBlog.edges.forEach(edge => {
           createPage({
             path: edge.node.slug,
             component: blogPostTemplate,
