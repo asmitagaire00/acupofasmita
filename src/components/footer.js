@@ -5,7 +5,7 @@ export default class footer extends Component {
     return (
       <div className="site-footer" id="footer">
         <div className="container">
-          <span>{this.props.siteName}</span>
+          <span>©{new Date().getFullYear()} {this.props.siteName}</span>
         </div>
       </div>
     );
